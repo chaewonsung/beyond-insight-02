@@ -1,0 +1,775 @@
+/* Import Local SCSS Files */
+@import 'variables', 'fonts';
+
+/* ########## Mixin ########## */
+@mixin text-overflow($line) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+}
+@mixin overflow-scroll() {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Responsive for Mobile */
+@media screen and (max-width: 767px) {
+  /* ########## Common CSS ########## */
+  section:not(.front-slider, .slogan) {
+    padding: 35px 10px;
+  }
+  [class*='inner'] {
+    width: 100%;
+  }
+  [class*='--mobile'] {
+    display: initial;
+  }
+
+  /* Header */
+  header {
+    .header-inner {
+      padding: 0 10px;
+      .logo-search {
+        .logo {
+        }
+        .search {
+          display: none;
+        }
+        .login-register-buttons {
+          button {
+            font-size: 13px;
+            padding: 3px 7px;
+            &.btn-register {
+              padding: 4px 7px;
+            }
+          }
+        }
+      }
+      .gnb {
+        .trigger {
+          margin-right: 10px !important;
+          &::before {
+            background: url('/images/icon-category-search.png');
+            margin-right: 0;
+            transform: translateY(2px);
+          }
+          span,
+          &::after {
+            display: none;
+          }
+        }
+        .special-navi {
+          white-space: nowrap;
+          overflow-x: scroll;
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+          &::-webkit-scrollbar {
+            display: none;
+          }
+          a {
+          }
+        }
+      }
+    }
+    .mega-navi {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: -300px;
+      width: 300px;
+      height: 100%;
+      overflow-y: scroll;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .mega-navi-inner {
+        padding-top: 60px;
+        flex-direction: column;
+        position: relative;
+        .btn-mega-navi-close {
+          display: block;
+          position: absolute;
+          left: 10px;
+          top: 10px;
+          color: $dark-gray;
+          font-size: 18px;
+        }
+        .search {
+          display: block;
+          width: 95%;
+          margin: 0 auto 20px;
+        }
+        .mega-navi-item {
+          b {
+            display: block;
+            padding: 5px 15px;
+            border-bottom: 1px solid $silver-black;
+            &::after {
+              content: '\F64D';
+              font-family: $bs-font;
+              float: right;
+              color: $silver-black;
+              font-size: 18px;
+              transform: translateY(-2px);
+            }
+            &.active {
+              color: $white;
+              &::after {
+                content: '\F63B';
+                color: $white;
+              }
+            }
+          }
+          .mega-navi-item-wrap {
+            display: none;
+            padding: 5px 15px;
+          }
+        }
+      }
+    }
+  }
+
+  /* Footer */
+  footer {
+    padding: 30px 20px;
+    .footer-inner {
+      .lnb-wrap {
+        flex-direction: column;
+        gap: 30px;
+        border: none;
+        padding-bottom: 0;
+        .footer-slogan {
+          font-size: 20px;
+          text-align: center;
+        }
+        .lnb {
+          flex-direction: column;
+          .link-item {
+            .link-item-title {
+              font-weight: 400;
+              padding: 10px 0;
+              border-bottom: 1px solid $silver-black;
+              pointer-events: all;
+              &::after {
+                content: '\f282';
+                font-family: $bs-font;
+                float: right;
+              }
+              &.active::after {
+                transform: rotate(180deg);
+              }
+            }
+            .link-item-content {
+              display: none;
+              padding: 5px 0;
+              a {
+                padding: 3px 0;
+              }
+            }
+          }
+        }
+      }
+      .corp-info-wrap {
+        text-align: center;
+        .address-trigger--mobile {
+          color: $silver-gray;
+        }
+        address {
+          display: none;
+          margin: 10px 0;
+        }
+        .copyright {
+          margin-bottom: 10px;
+        }
+        .sns {
+          position: static;
+          transform: translateY(0);
+          a {
+            .bi {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* ########## Front Page : index.html ########## */
+  /* Common : Front Header */
+  .front-header {
+    span {
+      font-size: 18px;
+    }
+    a {
+      font-size: 12px;
+    }
+  }
+
+  /* Section : Front Slider */
+  .front-slider {
+    .front-slider-items {
+      .front-slider-item {
+        .front-slider-item-inner {
+          flex-direction: column;
+          height: 360px;
+          padding-top: 20px;
+          .desc {
+            b {
+            }
+            .title {
+              font-size: 22px;
+              margin: 5px 0;
+            }
+            .period {
+            }
+          }
+          .pic {
+            height: 200px;
+            margin-top: 20px;
+            img {
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* Section : Category Shortcut */
+  .category-shortcut {
+    .category-shortcut-inner {
+      .category-shortcut-items {
+        flex-wrap: wrap;
+        .category-shortcut-item {
+          flex-basis: 25%;
+          box-shadow: none;
+          height: auto;
+          em {
+            .bi {
+            }
+            .bi-code {
+            }
+          }
+          span {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+
+  /* Section : Focus Class */
+  .focus-class {
+    .focus-class-inner {
+      .focus-class-content {
+        @at-root .focus-class-slider {
+          .focus-class-items {
+            .focus-class-item {
+              width: 45%;
+              .thum {
+                height: 120px;
+              }
+              .desc {
+                .class-name {
+                  font-size: 14px;
+                }
+                .class-price {
+                  gap: 5px;
+                  * {
+                    font-size: 13px;
+                  }
+                }
+                .class-review {
+                  .stars {
+                    .bi {
+                      font-size: 0.9em;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        [class*='swiper-navi-next'],
+        [class*='swiper-navi-prev'] {
+        }
+        [class*='swiper-navi-next'] {
+          &::after {
+            display: none;
+          }
+        }
+        [class*='swiper-navi-prev'] {
+          &::after {
+          }
+        }
+      }
+    }
+  }
+
+  /* Section : Best Class */
+  .best-class {
+    .best-class-inner {
+      .best-class-content {
+        .best-class-wrap {
+          flex-direction: column;
+          .invite-banner {
+            height: auto;
+            img:not(.invite-banner-img--tablet) {
+              display: block;
+              width: 100%;
+            }
+          }
+          .best-class-items {
+            gap: 10px;
+            .best-class-item {
+              width: 100%;
+              .desc {
+                .class-name {
+                  font-size: 14px;
+                }
+                .class-price {
+                  * {
+                    font-size: 0.9em;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* Section : Early Bird */
+  .early-bird {
+    .early-bird-inner {
+      .early-bird-content {
+        .countdown-wrap {
+          width: auto;
+        }
+        .early-bird-banner {
+          flex-direction: column;
+          padding: 15px;
+          .banner-text {
+            .h1 {
+              font-size: 17px;
+            }
+            .hash-tag {
+              font-size: 15px;
+              font-weight: 500;
+            }
+          }
+          .banner-img {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  /* ########## Early Bird Countdown Custom CSS ##########*/
+  #early-bird-countdown {
+    font-size: 22px;
+  }
+
+  /* Section : Blog */
+  .blog {
+    .blog-inner {
+      .blog-content {
+        .blog-items {
+          flex-direction: column;
+          gap: 40px;
+        }
+      }
+    }
+  }
+
+  /* Section : Slogan */
+  .slogan {
+    padding: 20px !important;
+    .slogan-inner {
+      .slogan-content {
+        .h1 {
+          font-size: 20px;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  /* Section : Tip Tech */
+  .tip-tech {
+    .tip-tech-content {
+      .tip-tech-items {
+        .tip-tech-item {
+          width: 100%;
+          &:nth-child(5) {
+            border-bottom: 1px solid $silver-gray;
+            padding-bottom: 20px;
+          }
+          .desc {
+            .tip-tech-title {
+              font-size: 14px;
+            }
+            p {
+              font-size: 13px;
+              @include text-overflow(2);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* ########## Category Main Page : category-main.html ########## */
+  .category-class {
+    padding-top: 0 !important;
+    .category-class-main {
+      h1 {
+      }
+      img {
+      }
+    }
+    .category-class-detail {
+      span {
+        font-size: 18px;
+      }
+      .category-shortcut-btns {
+        .btn-shortcut {
+          margin-right: 5px;
+          margin-bottom: 5px;
+          padding: 3px 10px;
+          &.active {
+          }
+        }
+      }
+    }
+    .category-class-sort {
+      > * {
+        height: 30px;
+        width: 80px;
+        font-size: 12px;
+      }
+      select {
+        background-size: 8px;
+        background-position: top 55% right 10px;
+      }
+      .btn-earlybird {
+      }
+      .btn-event {
+      }
+    }
+    .category-class-wrap {
+      .focus-class-slider {
+      }
+    }
+    .pagination {
+      .page-btns {
+        .btn-page {
+          margin-right: 5px;
+          padding: 0 3px;
+          &.active {
+          }
+        }
+      }
+    }
+  }
+
+  /* ########## Category Main Page : take-course.html ########## */
+  .take-course {
+    padding: 0 !important;
+    .take-course-inner {
+      flex-direction: column;
+      gap: 0;
+      > * {
+        box-shadow: none;
+        border-radius: 0;
+        padding: 20px;
+      }
+      .cart {
+        input[type='checkbox'] {
+        }
+        @at-root .take-course-headline {
+        }
+        .cart-header {
+          input[type='checkbox'] {
+          }
+          .btn-select-all {
+            .selected {
+            }
+            .total {
+            }
+          }
+          .btn-clear-all {
+            padding: 3px;
+          }
+        }
+        .cart-items {
+          .cart-item {
+            &:not(:last-child) {
+            }
+            .check-status {
+            }
+            .thum {
+              flex: 0 0 60px;
+              img {
+              }
+            }
+            .cart-overview {
+              padding: 0;
+              .cart-overview-header {
+                span {
+                  font-size: 12px;
+                }
+                .btn-clear {
+                }
+              }
+              .cart-overview-detail {
+                flex-direction: column;
+                gap: 5px;
+                .cart-overview-info {
+                  .class-name {
+                    height: auto;
+                    font-size: 14px;
+                  }
+                  .mentor-info {
+                    font-size: 12px;
+                    em {
+                    }
+                  }
+                }
+                .cart-overview-price {
+                  text-align: left;
+                  > * {
+                    font-size: 14px;
+                    display: inline-block;
+                    margin-right: 3px;
+                  }
+                  .discount-rate {
+                  }
+                  .price-prev {
+                  }
+                  .price-current {
+                    font-size: 15px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .payment {
+        border-top: 1px dashed $dim-gray;
+        > div:not(:last-child) {
+        }
+        .price-total {
+          > div {
+            b {
+            }
+          }
+          .payment-headline {
+          }
+          .current-price {
+            b {
+            }
+            span {
+              em {
+              }
+            }
+          }
+          .origin-price {
+          }
+          .discount-price {
+            span {
+              em {
+              }
+            }
+          }
+        }
+        .mobile-confirm {
+          > div {
+            input[type='tel'] {
+              &::placeholder {
+              }
+            }
+            .btn-request {
+            }
+          }
+        }
+        .payment-method {
+          > div {
+            &:not(:last-child) {
+            }
+            label {
+              input[type='radio'] {
+                + em {
+                }
+                &:checked + em {
+                }
+              }
+              img {
+              }
+              .info {
+              }
+            }
+          }
+        }
+        .btn-payment-final {
+        }
+      }
+    }
+  }
+
+  /* ########## Class Detail Page : class-detail.html ########## */
+  /* Section : Class Detail Banner */
+  .class-detail-banner {
+    .class-detail-banner-content {
+      height: 350px;
+      flex-direction: column;
+      justify-content: center;
+      .banner-text {
+        display: none;
+      }
+    }
+  }
+
+  /* Section : Class Detail */
+  .class-detail {
+    padding: 0 !important;
+    .class-detail-content {
+      flex-direction: column-reverse;
+      gap: 0;
+      > div {
+        border-radius: 0;
+        box-shadow: none;
+      }
+      .class-detail-info {
+        border-top: 1px dashed $dim-gray;
+        .class-detail-navi {
+          overflow-x: scroll;
+          @include overflow-scroll;
+          a {
+            white-space: nowrap;
+          }
+        }
+        article {
+          .class-detail-header {
+            &::before {
+              width: 3.5px;
+            }
+            span {
+              font-size: 18px;
+            }
+            p {
+              font-size: 13px;
+            }
+          }
+        }
+        /* Article : Class Curriculum */
+        .class-curriculum {
+          .class-detail-wrap {
+            .curriculum-accordion {
+              .accordion {
+                .chapter-title {
+                  .chapter-hour {
+                    display: none;
+                  }
+                }
+                .chapter-content {
+                  .chapter-content-class {
+                    gap: 10px;
+                    .class-hour {
+                      display: none;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        /* Article : Class Review */
+        .class-review {
+          .class-detail-wrap {
+            .review-gui {
+              flex-direction: column;
+              .review-graph {
+                width: 100%;
+                .review-stars {
+                  .class-review {
+                    .stars {
+                      .bi {
+                        font-size: 22px;
+                      }
+                    }
+                    .rating {
+                      font-size: 28px;
+                    }
+                    .review-count {
+                      font-size: 14px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        /* Article : Class Faq */
+        .class-faq {
+          .class-detail-wrap {
+            * {
+              font-size: 14px;
+            }
+          }
+        }
+        /* Article : Class Mentor */
+        .class-mentor {
+          .class-detail-wrap {
+            flex-direction: column;
+            .mentor-profile-summary {
+              flex: auto;
+              height: 260px;
+              .mentor-button {
+                .btn-mentor-profile {
+                  padding: 3px 5px;
+                }
+              }
+            }
+
+            .mentor-profile-career {
+              * {
+                font-size: 14px;
+              }
+              .mentor-field {
+                b {
+                  font-size: 15px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .class-detail-sidebar {
+        position: static;
+        width: auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  /* ########## Front Page : index.html ########## */
+  /* Front Event Banner */
+  .front-event-banner {
+    width: 100%;
+    max-width: none;
+    right: auto;
+    bottom: 0;
+  }
+}

@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>비욘드 인사이트</title>
+    <link rel="icon" href="/images/favicon.png" />
+    <!-- Library : Jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Library : Jquery Countdown -->
+    <script src="/script/the-final-countdown/jquery.countdown.min.js"></script>
+    <!-- Library : Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/responsive-mobile.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <div class="header-include"></div>
+      <!-- Main -->
+      <main>
+        <section class="category-class">
+          <div class="category-class-inner">
+            <div class="category-class-main">
+              <h1>개발·프로그래밍</h1>
+              <img src="/images/ct-category-main-01.jpg" alt="" />
+            </div>
+            <div class="category-class-detail">
+              <span>세부 카테고리</span>
+              <div class="category-shortcut-btns">
+                <button class="btn-shortcut active">전체</button
+                ><button class="btn-shortcut">웹 개발</button
+                ><button class="btn-shortcut">프론트엔드</button
+                ><button class="btn-shortcut">백엔드</button
+                ><button class="btn-shortcut">모바일 앱 개발</button
+                ><button class="btn-shortcut">데이터베이스</button
+                ><button class="btn-shortcut">게임 개발</button
+                ><button class="btn-shortcut">자격증</button>
+              </div>
+            </div>
+            <div class="category-class-sort">
+              <select>
+                <option value="">인기순</option>
+                <option value="">평점순</option>
+              </select>
+              <button class="btn-earlybird">얼리버드 할인</button
+              ><button class="btn-event">이벤트 할인</button>
+            </div>
+            <div class="category-class-wrap">
+              <div class="focus-class-slider swiper">
+                <div class="focus-class-items swiper-wrapper">
+                  <div class="focus-class-item swiper-slide">
+                    <div class="thum">
+                      <img
+                        src="/images/beyond-class-main-cover-01.png"
+                        alt=""
+                      /><span class="like"></span
+                      ><span class="badge discount">30% 할인</span>
+                    </div>
+                    <div class="desc">
+                      <div class="class-name">
+                        [2022년 출제기준] 웹디자인기능사 실기시험 완벽 가이드
+                      </div>
+                      <div class="class-info">
+                        코딩웍스 · 80강 · 16시간 30분
+                      </div>
+                      <div class="class-price">
+                        <span class="discount-rate">30%</span
+                        ><s class="price-prev">132,000원</s
+                        ><span class="price-current">92,400원</span>
+                      </div>
+                      <div class="class-review">
+                        <span class="stars"
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-half"></i></span
+                        ><span class="rating">4.9</span
+                        ><span class="trainee">1,234명 수강</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="focus-class-item swiper-slide">
+                    <div class="thum">
+                      <img
+                        src="/images/beyond-class-main-cover-02.png"
+                        alt=""
+                      /><span class="like"></span
+                      ><span class="badge discount">30% 할인</span>
+                    </div>
+                    <div class="desc">
+                      <div class="class-name">
+                        아름답고 탄탄한 라인을 만들어주는 필라테스 클래스
+                      </div>
+                      <div class="class-info">
+                        코딩웍스 · 80강 · 16시간 30분
+                      </div>
+                      <div class="class-price">
+                        <span class="discount-rate">30%</span
+                        ><s class="price-prev">132,000원</s
+                        ><span class="price-current">92,400원</span>
+                      </div>
+                      <div class="class-review">
+                        <span class="stars"
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-half"></i></span
+                        ><span class="rating">4.9</span
+                        ><span class="trainee">1,234명 수강</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="focus-class-item swiper-slide">
+                    <div class="thum">
+                      <img
+                        src="/images/beyond-class-main-cover-03.png"
+                        alt=""
+                      /><span class="like"></span
+                      ><span class="badge discount">30% 할인</span>
+                    </div>
+                    <div class="desc">
+                      <div class="class-name">
+                        외국인과 영어로 네이티브처럼 대화하는 노하우! 영어 발음
+                        배우기
+                      </div>
+                      <div class="class-info">
+                        코딩웍스 · 80강 · 16시간 30분
+                      </div>
+                      <div class="class-price">
+                        <span class="discount-rate">30%</span
+                        ><s class="price-prev">132,000원</s
+                        ><span class="price-current">92,400원</span>
+                      </div>
+                      <div class="class-review">
+                        <span class="stars"
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-half"></i></span
+                        ><span class="rating">4.9</span
+                        ><span class="trainee">1,234명 수강</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="focus-class-item swiper-slide">
+                    <div class="thum">
+                      <img
+                        src="/images/beyond-class-main-cover-04.png"
+                        alt=""
+                      /><span class="like"></span
+                      ><span class="badge discount">30% 할인</span>
+                    </div>
+                    <div class="desc">
+                      <div class="class-name">
+                        내 집 마련의 꿈을 꿈이 아닌 현실로 만드는 진짜 방법
+                      </div>
+                      <div class="class-info">
+                        코딩웍스 · 80강 · 16시간 30분
+                      </div>
+                      <div class="class-price">
+                        <span class="discount-rate">30%</span
+                        ><s class="price-prev">132,000원</s
+                        ><span class="price-current">92,400원</span>
+                      </div>
+                      <div class="class-review">
+                        <span class="stars"
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-half"></i></span
+                        ><span class="rating">4.9</span
+                        ><span class="trainee">1,234명 수강</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="focus-class-slider swiper">
+                <div class="focus-class-items swiper-wrapper">
+                  <div class="focus-class-item swiper-slide">
+                    <div class="thum">
+                      <img
+                        src="/images/beyond-class-main-cover-05.png"
+                        alt=""
+                      /><span class="like"></span
+                      ><span class="badge discount">30% 할인</span>
+                    </div>
+                    <div class="desc">
+                      <div class="class-name">
+                        [2022년 출제기준] 웹디자인기능사 실기시험 완벽 가이드
+                      </div>
+                      <div class="class-info">
+                        코딩웍스 · 80강 · 16시간 30분
+                      </div>
+                      <div class="class-price">
+                        <span class="discount-rate">30%</span
+                        ><s class="price-prev">132,000원</s
+                        ><span class="price-current">92,400원</span>
+                      </div>
+                      <div class="class-review">
+                        <span class="stars"
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-half"></i></span
+                        ><span class="rating">4.9</span
+                        ><span class="trainee">1,234명 수강</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="focus-class-item swiper-slide">
+                    <div class="thum">
+                      <img
+                        src="/images/beyond-class-main-cover-06.png"
+                        alt=""
+                      /><span class="like"></span
+                      ><span class="badge discount">30% 할인</span>
+                    </div>
+                    <div class="desc">
+                      <div class="class-name">
+                        아름답고 탄탄한 라인을 만들어주는 필라테스 클래스
+                      </div>
+                      <div class="class-info">
+                        코딩웍스 · 80강 · 16시간 30분
+                      </div>
+                      <div class="class-price">
+                        <span class="discount-rate">30%</span
+                        ><s class="price-prev">132,000원</s
+                        ><span class="price-current">92,400원</span>
+                      </div>
+                      <div class="class-review">
+                        <span class="stars"
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-half"></i></span
+                        ><span class="rating">4.9</span
+                        ><span class="trainee">1,234명 수강</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="focus-class-item swiper-slide">
+                    <div class="thum">
+                      <img
+                        src="/images/beyond-class-main-cover-07.png"
+                        alt=""
+                      /><span class="like"></span
+                      ><span class="badge discount">30% 할인</span>
+                    </div>
+                    <div class="desc">
+                      <div class="class-name">
+                        외국인과 영어로 네이티브처럼 대화하는 노하우! 영어 발음
+                        배우기
+                      </div>
+                      <div class="class-info">
+                        코딩웍스 · 80강 · 16시간 30분
+                      </div>
+                      <div class="class-price">
+                        <span class="discount-rate">30%</span
+                        ><s class="price-prev">132,000원</s
+                        ><span class="price-current">92,400원</span>
+                      </div>
+                      <div class="class-review">
+                        <span class="stars"
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-half"></i></span
+                        ><span class="rating">4.9</span
+                        ><span class="trainee">1,234명 수강</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="focus-class-item swiper-slide">
+                    <div class="thum">
+                      <img
+                        src="/images/beyond-class-main-cover-08.png"
+                        alt=""
+                      /><span class="like"></span
+                      ><span class="badge discount">30% 할인</span>
+                    </div>
+                    <div class="desc">
+                      <div class="class-name">
+                        내 집 마련의 꿈을 꿈이 아닌 현실로 만드는 진짜 방법
+                      </div>
+                      <div class="class-info">
+                        코딩웍스 · 80강 · 16시간 30분
+                      </div>
+                      <div class="class-price">
+                        <span class="discount-rate">30%</span
+                        ><s class="price-prev">132,000원</s
+                        ><span class="price-current">92,400원</span>
+                      </div>
+                      <div class="class-review">
+                        <span class="stars"
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-half"></i></span
+                        ><span class="rating">4.9</span
+                        ><span class="trainee">1,234명 수강</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="focus-class-slider swiper">
+                <div class="focus-class-items swiper-wrapper">
+                  <div class="focus-class-item swiper-slide">
+                    <div class="thum">
+                      <img
+                        src="/images/best-class-main-cover-01.png"
+                        alt=""
+                      /><span class="like"></span
+                      ><span class="badge discount">30% 할인</span>
+                    </div>
+                    <div class="desc">
+                      <div class="class-name">
+                        [2022년 출제기준] 웹디자인기능사 실기시험 완벽 가이드
+                      </div>
+                      <div class="class-info">
+                        코딩웍스 · 80강 · 16시간 30분
+                      </div>
+                      <div class="class-price">
+                        <span class="discount-rate">30%</span
+                        ><s class="price-prev">132,000원</s
+                        ><span class="price-current">92,400원</span>
+                      </div>
+                      <div class="class-review">
+                        <span class="stars"
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-half"></i></span
+                        ><span class="rating">4.9</span
+                        ><span class="trainee">1,234명 수강</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="focus-class-item swiper-slide">
+                    <div class="thum">
+                      <img
+                        src="/images/best-class-main-cover-02.png"
+                        alt=""
+                      /><span class="like"></span
+                      ><span class="badge discount">30% 할인</span>
+                    </div>
+                    <div class="desc">
+                      <div class="class-name">
+                        아름답고 탄탄한 라인을 만들어주는 필라테스 클래스
+                      </div>
+                      <div class="class-info">
+                        코딩웍스 · 80강 · 16시간 30분
+                      </div>
+                      <div class="class-price">
+                        <span class="discount-rate">30%</span
+                        ><s class="price-prev">132,000원</s
+                        ><span class="price-current">92,400원</span>
+                      </div>
+                      <div class="class-review">
+                        <span class="stars"
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-half"></i></span
+                        ><span class="rating">4.9</span
+                        ><span class="trainee">1,234명 수강</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="focus-class-item swiper-slide">
+                    <div class="thum">
+                      <img
+                        src="/images/best-class-main-cover-03.png"
+                        alt=""
+                      /><span class="like"></span
+                      ><span class="badge discount">30% 할인</span>
+                    </div>
+                    <div class="desc">
+                      <div class="class-name">
+                        외국인과 영어로 네이티브처럼 대화하는 노하우! 영어 발음
+                        배우기
+                      </div>
+                      <div class="class-info">
+                        코딩웍스 · 80강 · 16시간 30분
+                      </div>
+                      <div class="class-price">
+                        <span class="discount-rate">30%</span
+                        ><s class="price-prev">132,000원</s
+                        ><span class="price-current">92,400원</span>
+                      </div>
+                      <div class="class-review">
+                        <span class="stars"
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-half"></i></span
+                        ><span class="rating">4.9</span
+                        ><span class="trainee">1,234명 수강</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="focus-class-item swiper-slide">
+                    <div class="thum">
+                      <img
+                        src="/images/best-class-main-cover-04.png"
+                        alt=""
+                      /><span class="like"></span
+                      ><span class="badge discount">30% 할인</span>
+                    </div>
+                    <div class="desc">
+                      <div class="class-name">
+                        내 집 마련의 꿈을 꿈이 아닌 현실로 만드는 진짜 방법
+                      </div>
+                      <div class="class-info">
+                        코딩웍스 · 80강 · 16시간 30분
+                      </div>
+                      <div class="class-price">
+                        <span class="discount-rate">30%</span
+                        ><s class="price-prev">132,000원</s
+                        ><span class="price-current">92,400원</span>
+                      </div>
+                      <div class="class-review">
+                        <span class="stars"
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-half"></i></span
+                        ><span class="rating">4.9</span
+                        ><span class="trainee">1,234명 수강</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="focus-class-slider swiper">
+                <div class="focus-class-items swiper-wrapper">
+                  <div class="focus-class-item swiper-slide">
+                    <div class="thum">
+                      <img
+                        src="/images/best-class-main-cover-05.png"
+                        alt=""
+                      /><span class="like"></span
+                      ><span class="badge discount">30% 할인</span>
+                    </div>
+                    <div class="desc">
+                      <div class="class-name">
+                        [2022년 출제기준] 웹디자인기능사 실기시험 완벽 가이드
+                      </div>
+                      <div class="class-info">
+                        코딩웍스 · 80강 · 16시간 30분
+                      </div>
+                      <div class="class-price">
+                        <span class="discount-rate">30%</span
+                        ><s class="price-prev">132,000원</s
+                        ><span class="price-current">92,400원</span>
+                      </div>
+                      <div class="class-review">
+                        <span class="stars"
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-half"></i></span
+                        ><span class="rating">4.9</span
+                        ><span class="trainee">1,234명 수강</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="focus-class-item swiper-slide">
+                    <div class="thum">
+                      <img
+                        src="/images/best-class-main-cover-06.png"
+                        alt=""
+                      /><span class="like"></span
+                      ><span class="badge discount">30% 할인</span>
+                    </div>
+                    <div class="desc">
+                      <div class="class-name">
+                        아름답고 탄탄한 라인을 만들어주는 필라테스 클래스
+                      </div>
+                      <div class="class-info">
+                        코딩웍스 · 80강 · 16시간 30분
+                      </div>
+                      <div class="class-price">
+                        <span class="discount-rate">30%</span
+                        ><s class="price-prev">132,000원</s
+                        ><span class="price-current">92,400원</span>
+                      </div>
+                      <div class="class-review">
+                        <span class="stars"
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-half"></i></span
+                        ><span class="rating">4.9</span
+                        ><span class="trainee">1,234명 수강</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="focus-class-item swiper-slide">
+                    <div class="thum">
+                      <img
+                        src="/images/beyond-class-category-cover-15.png"
+                        alt=""
+                      /><span class="like"></span
+                      ><span class="badge discount">30% 할인</span>
+                    </div>
+                    <div class="desc">
+                      <div class="class-name">
+                        외국인과 영어로 네이티브처럼 대화하는 노하우! 영어 발음
+                        배우기
+                      </div>
+                      <div class="class-info">
+                        코딩웍스 · 80강 · 16시간 30분
+                      </div>
+                      <div class="class-price">
+                        <span class="discount-rate">30%</span
+                        ><s class="price-prev">132,000원</s
+                        ><span class="price-current">92,400원</span>
+                      </div>
+                      <div class="class-review">
+                        <span class="stars"
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-half"></i></span
+                        ><span class="rating">4.9</span
+                        ><span class="trainee">1,234명 수강</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="focus-class-item swiper-slide">
+                    <div class="thum">
+                      <img
+                        src="/images/beyond-class-category-cover-16.png"
+                        alt=""
+                      /><span class="like"></span
+                      ><span class="badge discount">30% 할인</span>
+                    </div>
+                    <div class="desc">
+                      <div class="class-name">
+                        내 집 마련의 꿈을 꿈이 아닌 현실로 만드는 진짜 방법
+                      </div>
+                      <div class="class-info">
+                        코딩웍스 · 80강 · 16시간 30분
+                      </div>
+                      <div class="class-price">
+                        <span class="discount-rate">30%</span
+                        ><s class="price-prev">132,000원</s
+                        ><span class="price-current">92,400원</span>
+                      </div>
+                      <div class="class-review">
+                        <span class="stars"
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-fill"></i
+                          ><i class="bi bi-star-half"></i></span
+                        ><span class="rating">4.9</span
+                        ><span class="trainee">1,234명 수강</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="pagination">
+              <button class="prev-list">
+                <i class="bi bi-chevron-left"></i>
+              </button>
+              <div class="page-btns">
+                <button class="btn-page active">1</button
+                ><button class="btn-page">2</button
+                ><button class="btn-page">3</button
+                ><button class="btn-page">4</button
+                ><button class="btn-page">5</button>
+              </div>
+              <button class="next-list">
+                <i class="bi bi-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- Footer -->
+      <div class="footer-include"></div>
+    </div>
+
+    <script src="/script/custom.js"></script>
+  </body>
+</html>

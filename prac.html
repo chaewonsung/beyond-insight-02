@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css');
+      .user-alarm {
+        /* display: flex; */
+        align-items: center;
+        gap: 10px;
+        > * {
+          cursor: pointer;
+        }
+        .cart,
+        .alarm {
+          position: relative;
+          .bi {
+            font-size: 20px;
+          }
+          em {
+            position: absolute;
+            right: -4px;
+            top: 0;
+            width: 15px;
+            height: 15px;
+            background-color: red;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 12px;
+            &::before {
+              content: attr(data-count);
+              color: white;
+              font-style: normal;
+              font-size: 11px;
+            }
+          }
+        }
+        .avatar {
+          display: inline-block;
+          width: 28px;
+          position: relative;
+          top: 50%;
+          transform: translateY(50%);
+          img {
+            display: block;
+            width: 100%;
+            border-radius: 50%;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <span class="user-alarm">
+      <span class="cart"
+        ><i class="bi bi-cart"></i><em data-count="2"></em
+      ></span>
+      <span class="alarm"
+        ><i class="bi bi-bell"></i><em data-count="9"></em
+      ></span>
+      <span class="avatar"
+        ><img src="/images/mentor-avatar-21.jpg" alt=""
+      /></span>
+    </span>
+  </body>
+</html>

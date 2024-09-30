@@ -1,0 +1,265 @@
+/* Import Local SCSS Files */
+@import 'variables', 'fonts';
+
+/* ########## Mixin ########## */
+@mixin text-overflow($line) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+}
+
+/* Responsive for Tablet */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* ########## Common CSS ########## */
+  section:not(.front-slider, .slogan) {
+    padding: 35px 0;
+  }
+  [class*='inner'] {
+    width: 100%;
+    padding: 0 20px;
+  }
+  [class*='--tablet'] {
+    display: initial;
+  }
+
+  /* Header */
+  header {
+    .search {
+      width: 300px;
+    }
+    .mega-navi {
+      .mega-navi-inner {
+        padding: 20px;
+      }
+    }
+  }
+
+  /* Footer */
+  footer {
+    * {
+      font-size: 11px;
+    }
+    .lnb-wrap {
+      gap: 30px;
+      .footer-slogan {
+        font-size: 18px;
+      }
+    }
+  }
+
+  /* ########## Front Page : index.html ########## */
+
+  /* Section : Front Slider */
+  .front-slider {
+    .front-slider-items {
+      .front-slider-item {
+        .front-slider-item-inner {
+          height: 300px;
+          .desc {
+            .title {
+              font-size: 27px;
+            }
+          }
+          .pic {
+            height: 230px;
+          }
+        }
+      }
+    }
+  }
+
+  /* Section : Category Shortcut */
+  .category-shortcut {
+    .category-shortcut-inner {
+      .category-shortcut-items {
+        gap: 15px;
+        .category-shortcut-item {
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  /* Section : Focus Class */
+  .focus-class {
+    .focus-class-inner {
+      padding: 0 35px !important;
+    }
+  }
+
+  /* Section : Best Class */
+  .best-class {
+    .best-class-inner {
+      .best-class-content {
+        .best-class-wrap {
+          flex-direction: column;
+          .invite-banner {
+            height: auto;
+            background-color: #aae8f3;
+            img:not(.invite-banner-img--tablet) {
+              display: none;
+            }
+            img.invite-banner-img--tablet {
+              display: block;
+              width: 500px;
+              margin: 0 auto;
+            }
+          }
+          .best-class-items {
+            row-gap: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  /* Section : Early Bird */
+  .early-bird {
+    .early-bird-inner {
+      .early-bird-content {
+        .early-bird-banner {
+          padding: 20px 50px;
+          .banner-text {
+            width: 330px;
+            .h1 {
+              font-size: 28px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* Section : Blog */
+  .blog {
+    .blog-inner {
+      .blog-content {
+        .blog-items {
+          .blog-item {
+            .thum {
+              height: 160px;
+            }
+            .desc {
+              p {
+                @include text-overflow(3);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* Section : Slogan */
+  .slogan {
+    .slogan-inner {
+      .slogan-content {
+        .h1 {
+          font-size: 26px;
+        }
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  /* Section : Tip Tech */
+  .tip-tech {
+    .tip-tech-content {
+      .tip-tech-items {
+        .tip-tech-item {
+          .desc {
+            p {
+              @include text-overflow(2);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* ########## Category Main Page : take-course.html ########## */
+  .take-course {
+    .take-course-inner {
+      flex-direction: column;
+    }
+  }
+
+  /* ########## Class Detail Page : class-detail.html ########## */
+  /* Section : Class Detail Banner */
+  .class-detail-banner {
+    .class-detail-banner-content {
+      height: 300px;
+      .banner-text {
+        h1 {
+          font-size: 24px;
+        }
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  /* Section : Class Detail */
+  .class-detail {
+    .class-detail-content {
+      flex-direction: column-reverse;
+      .class-detail-info {
+        .class-review {
+          .class-detail-wrap {
+            .review-gui {
+              .review-graph {
+                flex: 2.5;
+              }
+            }
+          }
+        }
+        .class-mentor {
+          .class-detail-wrap {
+            .mentor-profile-summary {
+              padding: 40px 20px;
+              .mentor-avatar {
+                img {
+                  width: 100px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .class-detail-sidebar {
+        width: auto;
+        position: static;
+        .class-info {
+          .desc {
+            .class-price {
+              justify-content: flex-end;
+              .discount-rate {
+                margin-right: 140px;
+              }
+            }
+          }
+        }
+        .main-action {
+          display: flex;
+          gap: 5px;
+          > * {
+            flex: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1160px) {
+  [class*='inner'] {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
